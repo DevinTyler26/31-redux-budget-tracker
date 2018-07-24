@@ -1,7 +1,8 @@
-const create = ({ title }) => ({
+const create = ({ title, cost }) => ({
   type: 'CATEGORY_CREATE',
   payload: {
     title,
+    cost,
     id: Math.random(),
     createdOn: new Date(),
   },
