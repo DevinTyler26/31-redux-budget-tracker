@@ -11,13 +11,12 @@ class Category extends React.Component {
       key,
       categoryRemove,
       categoryUpdate,
-    } = this.props;
+    } = this.props; 
     return (
       <div className="category" key={key}>
-        <h3> { category.title }</h3>
-        <p> Cost: {category.cost} </p>
-        <button onClick={() => categoryRemove(category)}>Delete</button>
+        <h3> { category.title } - ${category.price.toLocaleString({ style: 'currency' })}</h3>
         <CategoryForm category={category} onComplete={categoryUpdate}/>
+        <button onClick={() => categoryRemove(category)}>Delete</button>
       </div>
     );
   }
